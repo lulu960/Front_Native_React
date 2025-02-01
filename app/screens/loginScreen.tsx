@@ -24,7 +24,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
     
     dispatch(login( formData )).then((res: any) => {
       if (res.type === "auth/login/fulfilled") {
-        //navigation.navigate("Profil");
+        navigation.navigate("Swipe");
       } else {
         Alert.alert("Erreur", "Échec de la connexion. Vérifiez vos identifiants.");
       }
