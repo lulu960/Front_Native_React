@@ -20,16 +20,16 @@ const Navbar: React.FC = () => {
       <View style={styles.menu}>
         {token ? (
           <>
-            <NavButton label="Swipe" onPress={() => navigation.navigate("Swipe")} />
-            <NavButton label="Messages" onPress={() => navigation.navigate("Messages")} />
-            <NavButton label="Matchs" onPress={() => navigation.navigate("Matchs")} />
-            <NavButton label="Mon Profil" onPress={() => navigation.navigate("Profile")} />
+            <NavButton label="Swipe" onPress={() => navigation.navigate("swipe")} />
+            <NavButton label="Messages" onPress={() => navigation.navigate("messages")} />
+            <NavButton label="Matchs" onPress={() => navigation.navigate("matchs")} />
+            <NavButton label="Mon Profil" onPress={() => navigation.navigate("profile")} />
             <NavButton label="Déconnexion" onPress={handleLogout} isLogout />
           </>
         ) : (
           <>
-            <NavButton label="Connexion" onPress={() => navigation.navigate("Login")} />
-            <NavButton label="Inscription" onPress={() => navigation.navigate("Register")} />
+            <NavButton label="Connexion" onPress={() => navigation.navigate("login")} />
+            <NavButton label="Inscription" onPress={() => navigation.navigate("register")} />
           </>
         )}
       </View>

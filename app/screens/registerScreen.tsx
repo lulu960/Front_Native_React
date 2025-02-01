@@ -22,7 +22,7 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) => {
 
   // Rediriger l'utilisateur s'il est déjà connecté
   if (token) {
-    navigation.navigate("Swipe");
+    navigation.navigate("swipe");
   }
 
   const handleRegister = async () => {

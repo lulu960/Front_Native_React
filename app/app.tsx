@@ -6,17 +6,19 @@ import RegisterScreen from './screens/registerScreen';
 import SwipeScreen from './screens/swipeScreen';
 import Matchs from './screens/matchScreen';
 import Profile from './screens/profileScreen';
+import Messages from './screens/messageScreen';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Login" component={LoginScreen} />
-      <Stack.Screen name="Register" component={RegisterScreen} />
-      <Stack.Screen name="Swipe" component={SwipeScreen} />
-      <Stack.Screen name="Matchs" component={Matchs} />
-      <Stack.Screen name="Profile" component={Profile} />
+    <Stack.Navigator initialRouteName="login">
+      <Stack.Screen name="login" component={LoginScreen} />
+      <Stack.Screen name="register" component={RegisterScreen} />
+      <Stack.Screen name="swipe" component={SwipeScreen} />
+      <Stack.Screen name="matchs" component={Matchs} />
+      <Stack.Screen name="profile" component={Profile} />
+      <Stack.Screen name="messages" component={Messages} />
     </Stack.Navigator>
   );
 }
