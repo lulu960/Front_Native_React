@@ -3,6 +3,8 @@ import { Alert, StyleSheet, View, Text, Button, TextInput, TouchableOpacity } fr
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../redux/slices/authSlice"; // Utiliser Redux pour l'inscription
 import { NavigationProp } from "@react-navigation/native";
+import { Picker } from '@react-native-picker/picker';
+
 
 interface RegisterScreenProps {
   navigation: NavigationProp<any>;
@@ -76,12 +78,16 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({ navigation }) => {
         onChangeText={setAge}
       />
 
-      <TextInput
-        style={styles.input}
-        placeholder="Genre"
-        value={gender}
-        onChangeText={setGender}
-      />
+    <Picker
+      selectedValue={gender}
+      onValueChange={(itemValue) => setGender(itemValue)}
+      style={styles.input}
+    >
+      <Picker.Item label="Sélectionner le genre" value="" />
+      <Picker.Item label="Homme" value="male" />
+      <Picker.Item label="Femme" value="female" />
+      <Picker.Item label="Autre" value="other" />
+    </Picker>
 
       <TextInput
         style={styles.input}
